@@ -76,7 +76,7 @@ export class QtConfigurator {
             if (one_dir[0] >= '0' && one_dir[0] <= '9') {
                 let two_dirs = fs.readdirSync(qtDir + "/" + one_dir);
                 for (let two_dir of two_dirs) {
-                    if (two_dir.search("mingw") !== -1 || two_dir.search("msvc") !== -1 || two_dir.search("gcc") !== -1) {
+                    if (two_dir.search("mingw") !== -1 || two_dir.search("msvc") !== -1 || two_dir.search("gcc") !== -1 || two_dir.search("clang") !== -1) {
                         this.qtKitDirList.push(qtDir + "/" + one_dir + "/" + two_dir);
                     }
                 }
